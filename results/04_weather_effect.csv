@@ -1,0 +1,11 @@
+comparison,pct_change_in_trips,cells,days
+wet day (>= 5 mm) vs dry day,-33.5,130,443
+"dry day, max temp below 0 C, vs its month",-33.2,,42
+"dry day, max temp 0 to 5 C, vs its month",-8.1,,140
+"dry day, max temp 5 to 10 C, vs its month",0.9,,191
+"dry day, max temp 10 to 15 C, vs its month",2.5,,184
+"dry day, max temp 15 to 20 C, vs its month",4.8,,174
+"dry day, max temp 20 to 25 C, vs its month",4.7,,198
+"dry day, max temp 25 to 30 C, vs its month",2.4,,224
+"dry day, max temp 30 to 35 C, vs its month",0.4,,115
+"dry day, max temp 35 to 40 C, vs its month",-6.6,,10

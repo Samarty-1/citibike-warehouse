@@ -1,0 +1,13 @@
+station_name,area,departures_per_weekday,arrivals_per_weekday,net_per_weekday,morning_pattern
+Hamilton Park,Jersey City,17.9,6.0,-11.9,drains
+Liberty Light Rail,Jersey City,12.6,3.5,-9.1,drains
+Brunswick St,Jersey City,10.8,2.0,-8.8,drains
+Marin Light Rail,Jersey City,12.5,4.4,-8.2,drains
+Brunswick & 6th,Jersey City,10.2,2.5,-7.7,drains
+Lafayette Park,Jersey City,8.3,1.4,-6.8,drains
+Hoboken Terminal - Hudson St & Hudson Pl,Hoboken,9.5,21.4,11.9,fills
+South Waterfront Walkway - Sinatra Dr & 1 St,Hoboken,7.3,20.3,13.0,fills
+Exchange Pl,Jersey City,3.7,18.0,14.4,fills
+Bergen Ave & Sip Ave,Jersey City,3.8,21.3,17.5,fills
+Hoboken Terminal - River St & Hudson Pl,Hoboken,13.4,48.3,34.9,fills
+Grove St PATH,Jersey City,8.6,67.4,58.8,fills
