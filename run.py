@@ -6,6 +6,7 @@
 from __future__ import annotations
 
 import argparse
+import sys
 from pathlib import Path
 
 import duckdb
@@ -30,6 +31,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--db", default=str(ROOT / "data" / "citibike.duckdb"))
     args = parser.parse_args()
+    # DuckDB draws tables with box characters a Windows console can't encode
+    sys.stdout.reconfigure(encoding="utf-8")
 
     out = ROOT / "results"
     out.mkdir(exist_ok=True)
@@ -39,7 +42,7 @@ def main() -> None:
             rel = analysis(con, path.stem)
             rel.write_csv(str(out / f"{path.stem}.csv"))
             print(f"\n== {path.stem}")
-            print(rel.limit(15).df().to_string(index=False))
+            rel.limit(15).show(max_width=200)
 
 
 if __name__ == "__main__":
