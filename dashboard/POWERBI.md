@@ -82,6 +82,18 @@ as Latitude/Longitude with `trips_2024` on Size.
 
 ## 6. Publish
 
-Power BI: File > Export > PDF for the repo (`dashboard/powerbi_report.pdf`), and
-screenshot the main page as `dashboard/screenshot.png`. Tableau Public: Publish to Tableau
-Public and link it in the README.
+The built report is exported to `dashboard/powerbi_report.pdf`, with page images in
+`dashboard/powerbi_screenshot.png` and `dashboard/powerbi_screenshot_page2.png`.
+
+Notes from the build:
+
+- Each query reads its CSV from `raw.githubusercontent.com` with `Web.Contents` and
+  `RelativePath`, using Anonymous credentials and Public privacy, so the report refreshes
+  from the repo with no gateway.
+- `Naive Growth` uses the custom format `0.0"x"`. The "Valid trips analysed" card uses
+  `Valid Trips = DIVIDE ( SUM ( '03_like_for_like_growth'[all_trips] ), 1000000 )`
+  formatted `0.0"M"` (4.2M valid trips, versus 4.32M rows in `fct_trips`).
+- On the map, set `lat`/`lng` to Latitude/Longitude and "Don't summarize", or the visual
+  aggregates the coordinates and refuses to plot.
+
+Tableau Public: Publish to Tableau Public and link it in the README.
