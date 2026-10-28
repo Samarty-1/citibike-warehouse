@@ -106,6 +106,15 @@ The tests come in two layers:
   overlapping versions, every trip lands exactly once, unambiguous
   point-in-time joins, and the known station histories above.
 
+## Dashboard
+
+`dashboard/` turns the findings into an interactive page without needing the 1.7 GB
+warehouse: `dashboard/export.py` writes ~50 KB of CSVs from it, and
+`streamlit run dashboard/app.py` shows the like-for-like growth chart (2.6x naive vs +31%),
+weather effects, the weekday commuter double peak and a station map.
+`dashboard/POWERBI.md` is a step-by-step build of the same report in Power BI or Tableau,
+with the DAX measures.
+
 Data: [Citi Bike System Data](https://citibikenyc.com/system-data) (Lyft
 Bikes and Scooters). Weather: [Open-Meteo](https://open-meteo.com/)
 historical archive (ERA5).
