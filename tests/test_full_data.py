@@ -3,7 +3,8 @@ from run import analysis
 
 
 def one(con, sql):
-    return con.sql(sql).fetchone()[0]
+    # fetchall(), not fetchone(): DuckDB 2.0 relations have no fetchone()
+    return con.sql(sql).fetchall()[0][0]
 
 
 def test_every_staged_trip_lands_once(full):
@@ -44,7 +45,7 @@ def test_linked_legacy_stations_mostly_keep_their_name(full):
         select count(*), count(*) filter (where p.station_name = s.station_name)
         from dim_station s
         join dim_station p on p.station_key = s.station_key and p.version_no = s.version_no - 1
-        where p.system = 'legacy' and s.system = 'current'""").fetchone()
+        where p.system = 'legacy' and s.system = 'current'""").fetchall()[0]
     assert linked >= 45 and same_name / linked >= 0.9
 
 
