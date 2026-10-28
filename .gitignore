@@ -3,3 +3,6 @@ __pycache__/
 .pytest_cache/
 *.duckdb
 *.duckdb.wal
+
+# the exported dashboard CSVs are small and the app needs them
+!dashboard/data/
