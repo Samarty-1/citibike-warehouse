@@ -115,6 +115,12 @@ weather effects, the weekday commuter double peak and a station map.
 `dashboard/POWERBI.md` is a step-by-step build of the same report in Power BI or Tableau,
 with the DAX measures.
 
+The Power BI version is built: [`dashboard/powerbi_report.pdf`](dashboard/powerbi_report.pdf)
+(2 pages). It reads the same CSVs straight from this repo.
+
+![Power BI report, overview page](dashboard/powerbi_screenshot.png)
+![Power BI report, when and where page](dashboard/powerbi_screenshot_page2.png)
+
 Data: [Citi Bike System Data](https://citibikenyc.com/system-data) (Lyft
 Bikes and Scooters). Weather: [Open-Meteo](https://open-meteo.com/)
 historical archive (ERA5).
